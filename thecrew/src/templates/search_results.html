@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>搜尋結果：</p><h1><br>
+
+
+
+</h2>點擊下方連結以查看<h2><br>
+
+
+
+{% for post in queryset %}
+    <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    <br><br>
+{% endfor %}
+
+{% endblock %}
